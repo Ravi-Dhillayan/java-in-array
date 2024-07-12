@@ -1,0 +1,34 @@
+package arr;
+
+import java.util.Scanner;
+
+public class Sarrs {
+
+	public static void main(String[] args) {
+	
+			int n,i,j,t;
+			System.out.println("Enter the NO :");
+			Scanner o=new Scanner(System.in);
+			n=o.nextInt();
+			int a[]=new int[n];
+			System.out.println("Enter the Unshorted array: ");
+			for(i=0;i<n;i++) {
+				a[i]=o.nextInt();
+			}
+			for(i=0;i<n;i++) {
+				for(j=i+1;j<n;j++) {
+					if(a[i]>a[j]) {
+						t=a[i];
+						a[i]=a[j];
+						a[j]=t;
+						
+					}
+				}
+			}
+			System.out.println();
+			for(i=0;i<n;i++) {
+				System.out.println(a[i]);
+				
+			}
+	}
+}
